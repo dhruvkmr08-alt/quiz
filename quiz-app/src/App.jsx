@@ -61,7 +61,7 @@ export default function App() {
     <main className="app-shell">
       <header className="topbar">
         <button className="brand" type="button" onClick={goHome} aria-label="Quiz home">
-          <span className="brand-mark">Q</span><span>quiz<span className="brand-accent">spark</span></span>
+          <span className="brand-mark">Q</span><span>quiz</span>
         </button>
         <span className="topbar-label"><span className="live-dot" /> INTERACTIVE LEARNING</span>
       </header>
@@ -70,8 +70,8 @@ export default function App() {
         <section className="home-layout">
           <div className="home-copy">
             <div className="welcome-pill"><span>✦</span> LEARN SOMETHING NEW</div>
-            <h1>Small steps.<br /><span>Big brain</span> energy.</h1>
-            <p className="home-description">Challenge yourself with a quick quiz on web development. Test what you know, discover what you don’t, and have a little fun along the way.</p>
+            <h1>Quiz App</h1>
+            <p className="home-description">Test your knowledge with a quick quiz.</p>
             <div className="home-features">
               <div><span className="feature-icon purple">◷</span><span><strong>5–8 minutes</strong><small>Quick and focused</small></span></div>
               <div><span className="feature-icon yellow">✧</span><span><strong>{questionsData.length} questions</strong><small>HTML, CSS, JavaScript & React</small></span></div>
