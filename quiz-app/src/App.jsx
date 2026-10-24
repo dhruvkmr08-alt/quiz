@@ -4,7 +4,6 @@ import Question from './components/Question.jsx';
 import Result from './components/Result.jsx';
 
 function shuffleQuestions(list) {
-  // Fisher-Yates shuffle: randomises question order without changing the original array.
   const shuffled = [...list];
   for (let i = shuffled.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -61,7 +60,7 @@ export default function App() {
   return (
     <main className="app-shell">
       <header className="topbar">
-        <button className="brand" type="button" onClick={goHome} aria-label="QuizSpark home">
+        <button className="brand" type="button" onClick={goHome} aria-label="Quiz home">
           <span className="brand-mark">Q</span><span>quiz<span className="brand-accent">spark</span></span>
         </button>
         <span className="topbar-label"><span className="live-dot" /> INTERACTIVE LEARNING</span>
@@ -78,7 +77,7 @@ export default function App() {
               <div><span className="feature-icon yellow">✧</span><span><strong>{questionsData.length} questions</strong><small>HTML, CSS, JavaScript & React</small></span></div>
             </div>
             <button className="button button-primary start-button" type="button" onClick={startQuiz}>Start the quiz <span aria-hidden="true">→</span></button>
-            <p className="no-pressure">No pressure. Just progress. ✨</p>
+            <p className="no-pressure">No pressure. Just progress. </p>
           </div>
           <div className="home-art" aria-label="Quiz summary">
             <div className="art-orbit orbit-one" /><div className="art-orbit orbit-two" />
@@ -110,7 +109,7 @@ export default function App() {
 
       {stage === 'results' && <div className="results-layout"><Result questions={questions} answers={answers} onRestart={startQuiz} onHome={goHome} /></div>}
 
-      <footer className="site-footer"><span>© 2026 QuizSpark</span><span>Made for curious minds <span className="footer-heart">♥</span></span></footer>
+      <footer className="site-footer"><span>© 2026 Quiz</span><span>Made for curious minds <span className="footer-heart">♥</span></span></footer>
     </main>
   );
 }
